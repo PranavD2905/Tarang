@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Revitalised Solutions</title>
+  <link rel="stylesheet" href="Seller_list.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+ 
+  <!-- Hero Banner -->
+  <header class="hero" id="top" style="background-image: url(waterplant1.jpeg); background-size: cover; background-position: center;">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1></h1>
+    <p><p>
+  </div>
+  </header>
+
+
+
+   <section class="feature-section" id="areas-expertise">
+  <div class="feature-heading">
+    <h2><span>Carbon Credit Submission Portal</span><br></h2>
+  </div>
+  
+  <div class="feature-cards">
+   
+    <div class="feature-card">
+      <img src="result_0.jpeg" alt="Feature 1">
+      <h3>CO₂ Carbon Credits — Tree Plantation<br></h3>
+      <p>
+Trees naturally absorb carbon dioxide (CO₂) and store it in their biomass. Planting new trees or protecting existing ones reduces harmful gases in the air. By recording details like tree type, age, and number of trees, you can measure how much CO₂ your plantation absorbs and earn carbon credits.
+</p>
+   <div class="feature-cta">
+    <a href="#!" class="cta-button2" onclick="openPopup('formCard2')">Add Info →</a>
+  </div>
+  </div>
+     <div class="feature-card">
+      <img src="methane plant.avif" alt="Feature 2">
+      <h3>Methane Carbon Credits — Waste Management <br></h3>
+      <p>
+Methane (CH₄) is over 25 times more harmful than CO₂ as a greenhouse gas. It mostly comes from organic waste, dairy farms, and landfills. Managing waste responsibly—through composting, or better farming practices—helps cut methane emissions. Recording organic waste handled lets you calculate and claim methane carbon credits.
+  <div class="feature-cta">
+    <a href="#!" class="cta-button2" onclick="openPopup('formCard1')">Add Info→</a>
+  </div>    
+</div>
+    
+    <div class="feature-card">
+      <img src="DeWatermark.ai_1757072669849(1).jpeg" alt="Feature 3">
+      <h3>Plastic Carbon Credits — Waste Collection<br> </h3>
+      <p>
+Plastic waste pollutes oceans, rivers, and soil, and releasing it into the environment also contributes to greenhouse gas emissions. Recycling or safely disposing of plastic reduces this impact. By uploading data on collected or recycled plastic waste, you can track your contribution to sustainability and earn plastic credits.    </p>
+   <div class="feature-cta">
+    <a href="#!" class="cta-button2" onclick="openPopup('formCard1')">Add Info→</a>
+  </div>   
+</div>
+  </div>
+
+  <!-- Popup Overlay -->
+<!-- Popup Overlay -->
+<div id="popupOverlay" class="popup-overlay">
+  <div id="popupBox" class="popup-box">
+    <span id="popupClose">&times;</span> <!-- ✅ This stays outside popupContent -->
+    <div id="popupContent"></div> <!-- ✅ Dynamic form loads here -->
+  </div>
+</div>
+
+
+
+ <!-- Hidden forms for each feature card -->
+<div id="formCard1" style="display: none;">
+  <section class="section contact-form">
+    <h2> CO₂ Carbon Credit Submission</h2>
+    <p style="margin-bottom: 15px;">
+      Record your tree plantation data below to calculate your CO₂ absorption credits.
+    </p>
+
+    <form class="form-split" id="treeCreditForm">
+      <div class="form-column personal-info">
+        <h3>Tree Details</h3>
+
+        <!-- Number of Trees -->
+        <input type="number" name="tree-count" placeholder="Number of Trees (N)" min="1" required>
+
+        <!-- Tree Type Dropdown -->
+        <select name="tree-type" required>
+          <option value="">Select Tree Type</option>
+          <option value="Mango">Mango</option>
+          <option value="Neem">Neem</option>
+          <option value="Teak">Teak</option>
+          <option value="Bamboo">Bamboo</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <!-- Tree Age Dropdown -->
+        <select name="tree-age" required>
+          <option value="">Select Tree Age (Y)</option>
+          <option value="1">Less than 3 years</option>
+          <option value="3">3 – 5 years</option>
+          <option value="5">5 – 10 years</option>
+          <option value="10">More than 10 years</option>
+        </select>
+
+        <h3>Geo Location</h3>
+
+        <!-- Geo Location -->
+       <div class="geo-fields">
+  <input type="text" name="longitude" placeholder="Longitude (e.g. 77.2090)" required>
+  <input type="text" name="latitude" placeholder="Latitude (e.g. 28.6139)" required>
+</div>
+     </div>
+  <h3>Documents</h3>
+
+  <!-- 🌳 Image URL -->
+  <label>Image URL of Trees</label>
+  <input type="url" name="tree-image-url" placeholder="https://example.com/tree.jpg" required>
+
+  <div class="form-column message-info">
+    <!-- 📄 Document URL instead of file upload -->
+    <label>Document URL of Trees</label>
+    <input type="url" name="tree-document-url" placeholder="https://example.com/document.pdf" required>
+    <h3>Additional Info</h3>
+    <textarea name="message" placeholder="Describe your plantation (optional)" rows="4"></textarea>
+    
+    <button type="submit" class="cta-button">Submit & Calculate</button>
+  </div>
+</form>
+</section>
+</div>
+
+<div id="formCard2" style="display: none;">
+  <section class="section contact-form">
+    <h2> Methane Carbon Credit Submission</h2>
+    <p style="margin-bottom: 15px;">
+      Submit details about your waste management activity to calculate methane emission reductions.
+    </p>
+
+    <form class="form-split" id="methaneCreditForm">
+      <div class="form-column personal-info">
+        
+
+     >
+        <h3>Waste Management Details</h3>
+
+     
+        <input type="number" name="waste-amount" placeholder="Organic Waste (W in Kg)" min="1" required>
+
+      <h3>Geo Location</h3>
+
+      
+        <div class="geo-fields">
+  <input type="text" name="longitude" placeholder="Longitude (e.g. 77.2090)" required>
+  <input type="text" name="latitude" placeholder="Latitude (e.g. 28.6139)" required>
+</div>
+      </div>
+     
+      <label>Image URL of Site</label>
+<input type="url" name="site-image-url" placeholder="https://example.com/site.jpg" required>
+
+<label>Document URL (optional)</label>
+<input type="url" name="site-document-url" placeholder="https://example.com/document.pdf">
+
+
+      <div class="form-column message-info">
+        <h3>Additional Info</h3>
+        <textarea name="message" placeholder="Describe your waste management process (optional)" rows="4"></textarea>
+
+        <button type="submit" class="cta-button">Submit & Calculate</button>
+      </div>
+    </form>
+  </section>
+</div>
+
+
+<div id="formCard3" style="display: none;">
+  <section class="section contact-form">
+    <h2> Plastic Carbon Credit Submission</h2>
+    <p style="margin-bottom: 15px;">
+      Submit details about plastic waste you collected or recycled to earn plastic carbon credits.
+    </p>
+
+    <form class="form-split" id="plasticCreditForm">
+      <div class="form-column personal-info">
+  
+ <h3>Plastic Management Details</h3>
+        <!-- Plastic Waste Quantity -->
+        <input type="number" name="plastic-quantity" placeholder="Plastic Waste (P in Kg)" min="1" required>
+
+        <!-- Type of Plastic -->
+       
+  <h3>Geo Location</h3>
+        
+
+        <!-- Geo Location (Optional) -->
+        <div class="geo-fields">
+  <input type="text" name="longitude" placeholder="Longitude (e.g. 77.2090)" required>
+  <input type="text" name="latitude" placeholder="Latitude (e.g. 28.6139)" required>
+</div>
+            <h3>Documents</h3>
+            <label>Image URL of Plastic Waste</label>
+<input type="url" name="plastic-image-url" placeholder="https://example.com/plastic.jpg" required>
+
+<label>Document URL (optional)</label>
+<input type="url" name="plastic-document-url" placeholder="https://example.com/document.pdf">
+
+
+      <div class="form-column message-info">
+        <h3>Additional Info</h3>
+        <textarea name="message" placeholder="Describe your plastic collection/recycling effort (optional)" rows="4"></textarea>
+
+        <button type="submit" class="cta-button">Submit & Calculate</button>
+      </div>
+    </form>
+  </section>
+</div>
+
+
+
+<section class="section split-section" id="exchange-carbon-credits">
+  <div class="split-text">
+    <h2>Exchange Your Carbon Credits</h2>
+    <p>
+      Connect directly with verified NGOs, corporate buyers, and sustainability initiatives that are looking to offset their carbon footprint.
+    </p>
+
+    <h3>Who Can Buy Your Credits?</h3>
+    <ul class="buyer-types">
+      <li>🌱 <strong>NGOs & Foundations:</strong> Supporting tree plantation and climate projects.</li>
+      <li>🏢 <strong>Corporate Buyers:</strong> Companies achieving net-zero commitments.</li>
+      <li>🏭 <strong>Industries:</strong> Offsetting emissions for compliance.</li>
+      <li>💡 <strong>Green Initiatives:</strong> Startups and projects rewarding eco-action.</li>
+    </ul>
+
+    <a href="#marketplace" class="cta-button">List Credits</a>
+  </div>
+
+  <div class="split-image">
+    <img src= alt="Carbon Credit Exchange">
+  </div>
+</section>
+
+  
+
+  <!-- Animation Script -->
+  <script src="Seller_list.js"></script>
+</body>
+</html>

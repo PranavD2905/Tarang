@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    background-color: #d8e6f7;
+   
+    
+}
+
+.video-section{
+    position: relative;
+  width: 100%;
+  height: 70vh; /* Adjust height as needed */
+  overflow: hidden;
+
+   
+}
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures it behaves like a background */
+  filter:blur(2px) brightness(1);
+  display: block;
+}
+
+.video-section video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    transform: translate(-50%,-50%);
+    object-fit:cover;
+    z-index:0;
+}
+.video-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+
+.video-overlay{
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* ✅ Center both directions */
+  text-align: center;  /* ✅ Center text */
+  z-index: 2;
+  color: white;
+  width: 90%;
+  max-width: 1000px; /* keeps text block tidy */
+  margin: 0 auto;
+}
+.marketplace-title {
+font-size: clamp(13rem, 8vw, 4rem);
+  font-weight: 1000;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+
+ .video-overlay h4 {
+  font-size: 1rem;
+  font-weight: normal;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin: 0 auto;  /* ✅ no margin-left */
+  max-width: 850px;
+    }
+
+    .video-overlay h1 {
+   font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0 auto 1rem auto; /* ✅ center horizontally */
+  max-width: 800px;
+    }
+
+   
+
+ 
+
+
+
+.text-container {
+  max-width: 900px;
+  margin-left: 12vh;
+  font-size: 1.5rem;
+  line-height: 1.6;
+text-align: left;
+}
+
+.text-container p:nth-of-type(1) {
+  line-height: 4rem;
+}
+.text-container p:nth-of-type(3) {
+  line-height: 4rem;
+}
+
+/* 🌱 Exchange Carbon Credits - Full Width Split Layout */
+#exchange-carbon-credits {
+   display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  align-items: stretch;             /* stretch both halves to full row height */
+  width: 100%;
+  min-height: 80vh;                 /* section height */
+
+  margin-bottom: 0;
+  padding: 0;
+}
+
+
+#exchange-carbon-credits h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1e3a2a;
+  margin-bottom: 15px;
+}
+
+#exchange-carbon-credits p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+#exchange-carbon-credits h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+/* BUYER LIST */
+.buyer-types {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 30px 0;
+}
+
+.buyer-types li {
+  background: white;
+  border-left: 4px solid #89CFF0;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buyer-types li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA BUTTON */
+#exchange-carbon-credits .cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  max-width: 240px;
+  text-align: center;
+}
+
+#exchange-carbon-credits .cta-button:hover {
+  background: #89CFF0;
+  transform: translateY(-3px);
+}
+
+
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+  #exchange-carbon-credits {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  #exchange-carbon-credits .split-text {
+    text-align: center;
+    padding: 40px 6%;
+  }
+
+  #exchange-carbon-credits .split-image {
+    min-height: 40vh;
+  }
+
+  .buyer-types li {
+    text-align: left;
+
+  }
+}
+/* 🌱 Carbon Credit List Section */
+.carbon-credit-list {
+   background: #e6f0ff;              
+  padding: 40 5%;                  /* Remove big top padding */
+  display: flex;
+  align-items: center;             /* ✅ Vertical center */
+  justify-content: center;         /* ✅ Horizontal center */
+  min-height: 100vh;               /* Full screen height */
+  text-align: center; 
+}
+
+.carbon-credit-list h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1e3a2a;
+  margin-bottom: 15px;
+}
+
+.carbon-credit-list p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.carbon-credit-list h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+/* ✅ List Styles */
+.buyer-types {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 0 auto 30px auto; /* ✅ center the list */
+}
+
+.buyer-types li {
+  background: white;
+  border-left: 4px solid #89CFF0;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buyer-types li:hover {
+  transform: translateX(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ CTA Button */
+.carbon-credit-list .cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #1e3a2a;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  max-width: 240px;
+  text-align: center;
+}
+
+.carbon-credit-list .cta-button:hover {
+  background: #89CFF0;
+  transform: translateY(-3px);
+}
+.list-container {
+  text-align: center;            /* ✅ Center text */
+  max-width: 800px;              /* ✅ Keep tidy */
+  margin: 0 auto;                /* ✅ Ensure centered block */
+}
+
+.buyer-types {
+  list-style: none;
+  padding-left: 0;
+  margin: 30px auto;
+  max-width: 600px;              /* ✅ Keep list narrow in middle */
+  text-align: left;              /* ✅ Keep bullet text aligned left */
+}
+
+.board{
+  background: #f7faff; /* light blueish shade */
+  padding: 50px 20px 70px 20px; /* more bottom padding */
+  margin-top: 50px; /* gap from upper section */
+  border-radius: 10px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.board img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.board h5{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.board p{
+    font-weight: 1400;
+    font-size: 25px;
+    color: #787d8d;
+}
+
+.board .people{
+    display: flex;
+  align-items: center;
+
+  gap: 12px;
+  text-align: left;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr{
+    border-bottom:  1px solid #eef0f3;
+}
+
+thead td{
+   font-size: 26px;
+  font-weight: 800;
+  background: #eaf3ff;
+  padding: 18px;
+  text-align: center;
+  border-bottom: 2px solid #d8e6f7
+}
+
+tbody tr td{
+    text-align: center;    /* ✅ center align data */
+    padding: 12px 15px;
+    
+}
+tbody tr:hover {
+  background-color: rgba(137, 207, 240, 0.15);
+  transition: 0.2s ease;
+}
+
+tr {
+  border-bottom: 1px solid #eef0f3;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+.active p{
+    background: #d7fada;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #2b2b2b;
+}
+
+
+.edit a{
+     text-decoration: none;
+  font-size: 20px;
+  color: #554cd1;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.load-more-btn {
+  display: inline-block;
+  margin: 30px auto 0 auto;
+  background: #09294a;
+;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background: #007acc;
+  transform: translateY(-3px);
+}
