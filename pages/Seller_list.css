@@ -579,7 +579,7 @@ input[type="file"] {
 
 /* RIGHT SIDE - FULL BACKGROUND */
 #exchange-carbon-credits .split-image {
-  background: url("sellerimage1.jpeg") center center / cover no-repeat;
+  background: url("../assets/sellerimage1.jpeg") center center / cover no-repeat;
     min-height: inherit;              /* same as section's min-height */
   width: 100%;
 }

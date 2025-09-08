@@ -104,4 +104,20 @@ window.addEventListener("DOMContentLoaded", () => {
   }).from(".gradient-text-section1 p", { y: 30, opacity: 0, stagger: 0.2 });
 });
 
+// Example: Connect to backend to get seller list
+async function fetchSellerList() {
+    try {
+        const res = await fetch('http://localhost:5000/api/seller/list');
+        const sellers = await res.json();
+        if (res.ok) {
+            // Use sellers in frontend
+            console.log('Seller list:', sellers);
+        } else {
+            alert(sellers.message || 'Failed to fetch sellers');
+        }
+    } catch (err) {
+        alert('Error connecting to backend');
+    }
+}
+
 

@@ -33,7 +33,7 @@ h2 {
   align-items: center;
   justify-content: center;
   /* Adjust image scaling */
-  background-image: url("company.avif");
+  background-image: url("../assets/company.avif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; /* Show full image without cropping */
@@ -266,7 +266,7 @@ input[type="file"] {
 }
 .cta-image {
   position: relative;
-  background: url('company2.avif') center/cover no-repeat;
+  background: url('../assets/company2.avif') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 6rem 2rem;

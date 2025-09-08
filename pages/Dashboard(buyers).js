@@ -74,3 +74,19 @@ switchMode.addEventListener('change', function () {
 		document.body.classList.remove('dark');
 	}
 })
+
+// Example: Connect to backend to get buyer dashboard data
+async function fetchBuyerDashboard() {
+    try {
+        const res = await fetch('http://localhost:5000/api/buyer/dashboard');
+        const dashboard = await res.json();
+        if (res.ok) {
+            // Use dashboard data in frontend
+            console.log('Buyer dashboard:', dashboard);
+        } else {
+            alert(dashboard.message || 'Failed to fetch dashboard');
+        }
+    } catch (err) {
+        alert('Error connecting to backend');
+    }
+}
